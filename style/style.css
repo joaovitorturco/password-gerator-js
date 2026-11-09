@@ -7,7 +7,7 @@
 :root {
   --bg: #d6f5e3;
   --ink: #111;
-  --accent: #ffd23f;
+  --accent: #1d5311;
   --ok: #7ae582;
   --erro: #ff6b6b;
 }
@@ -41,6 +41,7 @@ header a:hover {
 
 main {
   min-height: calc(100vh - 100px);
+  min-height: calc(100dvh - 100px);
   padding: 16px;
 }
 
@@ -71,6 +72,7 @@ main {
   background: var(--erro);
 }
 
+
 .card-title {
   font-weight: 700;
   text-transform: uppercase;
@@ -83,10 +85,16 @@ main {
   box-shadow: none !important;
 }
 
+/* Fonte da senha trocada */
 #senha {
-  font-family: "Courier New", monospace;
+  font-family: Verdana, Geneva, sans-serif;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+}
+
+#status {
+  color: #fff
 }
 
 .btn {
@@ -137,6 +145,7 @@ main {
 .checks input[type="checkbox"] {
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
   accent-color: var(--ink);
 }
 
@@ -152,8 +161,62 @@ main {
   font-weight: 700;
 }
 
-@media (max-width: 480px) {
+/* ===== Responsivo ===== */
+
+/* Tablets e celulares grandes */
+@media (max-width: 576px) {
+  header {
+    height: 80px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  main {
+    min-height: calc(100vh - 80px);
+    min-height: calc(100dvh - 80px);
+    padding: 20px 14px;
+    align-items: flex-start !important;
+  }
+
+  .card {
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  /* Campo da senha em uma linha, botões embaixo lado a lado */
+  .input-group {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .input-group > #senha {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .input-group > .btn {
+    flex: 1 1 0;
+    margin-left: 0 !important;
+    padding: 10px 0;
+  }
+
+  .form-control,
+  .btn {
+    font-size: 1rem; /* evita zoom automático no iOS */
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 400px) {
+  header {
+    font-size: 0.95rem;
+  }
+
   .checks {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 }
