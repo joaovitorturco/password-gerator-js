@@ -36,7 +36,7 @@ function gerarSenha(){
         const letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         const letrasMinusculas = "abcdefghijklmnopqrstuvwxyz"
         const nums = "0123456789"
-        const simb = "!@#$%&*"
+        const simb = "--!@#$%&*(){}"
         
         let caracteres = ''
         
