@@ -1,222 +1,60 @@
+/* #0f172a */
+:root {
+  --bg-color: #0f172a;
+  --header-color: #1e293b;
+  --hearder-hover: #273449;
+  --ink: #f1f5f9;
+  --ink-hover: #896ecd;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --bg: #d6f5e3;
-  --ink: #111;
-  --accent: #1d5311;
-  --ok: #7ae582;
-  --erro: #ff6b6b;
-}
-
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
-}
-
 header {
   height: 100px;
-  background: var(--accent);
-  color: var(--ink) !important;
-  border-bottom: 3px solid var(--ink);
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  background-color: var(--header-color);
 }
 
-header a {
+header > span {
+  font-size: 2.5rem;
+  margin-top: -10px;
+
+}
+
+header:hover {
+  background-color: var(--hearder-hover);
+}
+
+header i.instagram-logo {
   color: var(--ink);
-  font-size: 1.6rem;
-  transition: transform 0.15s;
+  font-size: 1.5rem;
 }
 
-header a:hover {
-  transform: rotate(-8deg) scale(1.15);
+header i.instagram-logo:hover {
+  color: var(--ink-hover);
 }
 
 main {
   min-height: calc(100vh - 100px);
-  min-height: calc(100dvh - 100px);
-  padding: 16px;
+  background-color: var(--bg-color);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.card {
-  width: 100%;
-  max-width: 460px;
-  background: #fff;
-  border: 3px solid var(--ink);
-  border-radius: 0;
-  box-shadow: 8px 8px 0 var(--ink);
+main > .card > #status {
+  color: #fff;
 }
 
-.card-header {
-  background: var(--accent);
-  border-bottom: 3px solid var(--ink);
-  border-radius: 0 !important;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  min-height: 44px;
+div.card, .card-body, .card-footer {
+  background-color: transparent;
+  border: 1px solid #fff;
 }
 
-.card-header.ok {
-  background: var(--ok);
-}
-
-.card-header.erro {
-  background: var(--erro);
-}
-
-
-.card-title {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.form-control {
-  border: 3px solid var(--ink);
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
-
-/* Fonte da senha trocada */
-#senha {
-  font-family: Verdana, Geneva, sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-size: 1rem;
-}
-
-#status {
-  color: #fff
-}
-
-.btn {
-  border: 3px solid var(--ink) !important;
-  border-radius: 0 !important;
-  font-weight: 700;
-  color: var(--ink);
-  box-shadow: 3px 3px 0 var(--ink);
-  transition: transform 0.1s, box-shadow 0.1s;
-}
-
-.btn-outline-secondary {
-  background: #fff;
-}
-
-.btn-outline-success {
-  background: var(--ok);
-}
-
-.btn:hover {
-  color: var(--ink);
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0 var(--ink);
-}
-
-.btn:active {
-  transform: translate(3px, 3px);
-  box-shadow: 0 0 0 var(--ink);
-}
-
-.checks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 16px;
-  text-align: left;
-  padding: 0 8px;
-  font-weight: 600;
-}
-
-.checks label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.checks input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  accent-color: var(--ink);
-}
-
-.card-footer {
-  background: var(--bg);
-  border-top: 3px solid var(--ink);
-  border-radius: 0 !important;
-  padding: 16px;
-}
-
-#inputTamanho {
+input[type="text"], input[type="text"]::placeholder, input[type="text"]:focus {
+  background-color: transparent;
+  color: #fff;
   text-align: center;
-  font-weight: 700;
 }
 
-/* ===== Responsivo ===== */
-
-/* Tablets e celulares grandes */
-@media (max-width: 576px) {
-  header {
-    height: 80px;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-  }
-
-  main {
-    min-height: calc(100vh - 80px);
-    min-height: calc(100dvh - 80px);
-    padding: 20px 14px;
-    align-items: flex-start !important;
-  }
-
-  .card {
-    box-shadow: 5px 5px 0 var(--ink);
-  }
-
-  .card-title {
-    font-size: 1.1rem;
-  }
-
-  /* Campo da senha em uma linha, botões embaixo lado a lado */
-  .input-group {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .input-group > #senha {
-    flex: 1 1 100%;
-    width: 100%;
-  }
-
-  .input-group > .btn {
-    flex: 1 1 0;
-    margin-left: 0 !important;
-    padding: 10px 0;
-  }
-
-  .form-control,
-  .btn {
-    font-size: 1rem; /* evita zoom automático no iOS */
-  }
-}
-
-/* Celulares pequenos */
-@media (max-width: 400px) {
-  header {
-    font-size: 0.95rem;
-  }
-
-  .checks {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-}
