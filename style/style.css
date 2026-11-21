@@ -28,12 +28,12 @@ header:hover {
   background-color: var(--hearder-hover);
 }
 
-header i.instagram-logo {
+header a {
   color: var(--ink);
   font-size: 1.5rem;
 }
 
-header i.instagram-logo:hover {
+header a:hover {
   color: var(--ink-hover);
 }
 
