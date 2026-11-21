@@ -58,3 +58,12 @@ input[type="text"], input[type="text"]::placeholder, input[type="text"]:focus {
   text-align: center;
 }
 
+@media (max-width: 400px) {
+  header {
+    font-size: 0.95rem;
+  }
+
+  div.card {
+    width: 90vw;
+  }
+}
