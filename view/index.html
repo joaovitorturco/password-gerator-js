@@ -8,51 +8,27 @@
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="../style/style.css">
+<link rel="stylesheet" href="../style/global.css">
 </head>
 <body>
-  <header class="d-flex justify-content-center align-items-center text-white">
-
-    
+  <header class="d-flex flex-row justify-content-center align-items-center gap-2">
+    <button id="gerador">Gerador</button>
+    <button id="testador">Testador</button>
   </header>
 
-  <main class="d-flex justify-content-center align-items-center">
-    <div class="card text-center">
-      <div class="card-header fw-bold" id="status">
-        status
-      </div>
-      <div class="card-body">
-        <h5 class="card-title text-white fw-bold">
-          PassW Gerator
-        </h5>
-        <div class="input-group my-3">
-          <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Senha" id="senha" readonly>
-          <button type="button" class="btn btn-outline-secondary" onclick="gerarSenha()">Criar</button>
-          <button type="button" class="btn btn-outline-success" onclick="copiarSenha()">Copiar</button>
-        </div>
-        <div class="checks text-white">
-        <label><input type="checkbox" id="maiusculas" checked> Maiúsculas</label>
-        <label><input type="checkbox" id="minusculas" checked> Minúsculas</label>
-        <label><input type="checkbox" id="numeros" > Números</label>
-        <label><input type="checkbox" id="simbolos" checked> Símbolos</label>
-      </div>
-      </div>
-      <div class="card-footer">
-        <input type="text"
-        class="form-control"
-        id="inputTamanho"
-        placeholder="Tamanho da senha"
-        inputmode="numeric"
-        pattern="[0-9]*"
-        value="10"
-        >
-        
-      </div>
+  
+
+   <main class="d-flex justify-content-center align-items-center">
+    <div class="card" id="conteudo">
+      <!-- Injeção de conteúdo com JavaScript -->
     </div>
-    <a href="https://github.com/joaovitorturco" target="_blank" class="mx-2">
-      <i class="bi bi-github"></i>
-    </a>
-  </main>
-<script src="../js/script.js"></script>
+
+    <abbr title="github">
+      <a href="https://github.com/joaovitorturco" target="_blank" class="mx-2">
+        <i class="bi bi-github"></i>
+      </a>
+    </abbr>
+  </main> 
+<script type="module" src="../js/script.js"></script>
 </body>
 </html>
