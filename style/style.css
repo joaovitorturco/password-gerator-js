@@ -28,9 +28,12 @@ header:hover {
   background-color: var(--hearder-hover);
 }
 
-header a {
+a {
   color: var(--ink);
   font-size: 1.5rem;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 
 header a:hover {
