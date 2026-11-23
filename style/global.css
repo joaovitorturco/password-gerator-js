@@ -27,6 +27,7 @@ header > button {
   border-radius: 5px;
 }
 
+
 a {
   color: var(--ink);
   font-size: 1.5rem;
@@ -45,24 +46,9 @@ main {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*
-
-div.card, .card-body, .card-footer {
-  background-color: transparent;
-  border: 1px solid #fff;
+.active{
+    background-color: #000000;
 }
-
-input[type="text"], input[type="text"]::placeholder, input[type="text"]:focus {
-  background-color: transparent;
-  color: #fff;
-}
-
-.barra {
-    height: 10px;
-    flex: 1;
-    border-radius: 10px;
-    background-color: #344054;
-} */
 
 @media (max-width: 400px) {
   header {

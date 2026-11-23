@@ -5,16 +5,21 @@ const btnGerar = document.getElementById("gerador") // botão que vai chamar o g
 const btnTestar = document.getElementById("testador")   // botão que vai chamar o testador de senhas
 
 // quando a página for carregada ou quando o botão de gerar for clicado, vai carregar o gerador de senhas
-btnGerar.addEventListener("click", () => {
-    carregarGerador()
+window.addEventListener("load", () => {
+    carregarTestador()
+    btnTestar.classList.add("active")
 });
 
 btnGerar.addEventListener("click", () => {
     carregarGerador()
+    btnTestar.classList.remove("active")
+    btnGerar.classList.add("active")
 })
 
 // quando o botão de testar for clicado, vai carregar o testador de senhas
-window.addEventListener("load", () => {
+btnTestar.addEventListener("click", () => {
     carregarTestador()
+    btnGerar.classList.remove("active")
+    btnTestar.classList.add("active")
 });
 
