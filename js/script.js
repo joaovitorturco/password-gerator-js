@@ -1,6 +1,6 @@
 import carregarGerador from "./gerador/gerador.js";
 import carregarTestador from "./testador/testador.js";
-
+const elemento = document.getElementById("conteudo");
 const btnGerar = document.getElementById("gerador") // botão que vai chamar o gerador de senhas
 const btnTestar = document.getElementById("testador")   // botão que vai chamar o testador de senhas
 
