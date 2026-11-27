@@ -60,14 +60,27 @@ main {
     width: 90vw !important;
   }
 
-  header>button {
-    background-color: var(--main-color);
+  header > button {
     font-size: 15px;
     padding: 5px 10px;
-    border-radius: 5px;
+  }
+}
+
+/* Celular grande */
+@media (min-width: 481) and (max-width: 767) {
+    header {
+    font-size: 0.95rem !important;
+  }
+  
+  div.card {
+    width: 70vw !important;
   }
 
- }
+  header > button {
+    font-size: 15px !important;
+    padding: 5px 10px !important;
+  }
+}
   
 /*
   RESPONSIVIDADE - BREAKPOINTS
