@@ -50,8 +50,8 @@ main {
   background-color: #000000;
 }
 
-/* Celular pequeno */
-@media (min-width: 480px) and (max-width: 767px) {
+
+@media (max-width: 480px) {
   header {
     font-size: 0.95rem;
   }
@@ -67,27 +67,8 @@ main {
     border-radius: 5px;
   }
 
-  /* Celular grande */
-  @media (max-width: 767px) {
-    
-  }
-
-  /* Tablet */
-  @media (max-width: 1023px) {
-
-  }
-
-  /* Notebook / PC */
-  @media (max-width: 1439px){
-
-  }
-
-  /* Desktop grande */
-  @media (min-width: 1440px){
-    
-  }
-}
-
+ }
+  
 /*
   RESPONSIVIDADE - BREAKPOINTS
 
