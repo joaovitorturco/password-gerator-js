@@ -6,8 +6,8 @@ const btnTestar = document.getElementById("testador")   // botão que vai chamar
 
 // quando a página for carregada ou quando o botão de gerar for clicado, vai carregar o gerador de senhas
 window.addEventListener("load", () => {
-    carregarTestador()
-    btnTestar.classList.add("active")
+    carregarGerador()
+    btnGerar.classList.add("active")
 });
 
 btnGerar.addEventListener("click", () => {

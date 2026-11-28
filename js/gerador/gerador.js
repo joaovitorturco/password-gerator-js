@@ -6,7 +6,7 @@
 export default function carregarGerador() {
     conteudo.innerHTML = `
     <div class="card text-center text-white">
-      <div class="card-header fw-bold" id="status">
+      <div class="card-header border-bottom border-2 fw-bold" id="status">
         status
       </div>
       <div class="card-body">
@@ -18,14 +18,14 @@ export default function carregarGerador() {
           <button type="button" class="btn btn-outline-secondary" id="btnGerar">Criar</button>
           <button type="button" class="btn btn-outline-success" id="btnCopiar">Copiar</button>
         </div>
-        <div class="checks text-white">
+        <div class="checks">
         <label><input type="checkbox" id="maiusculas" checked> Maiúsculas</label>
         <label><input type="checkbox" id="minusculas" checked> Minúsculas</label>
         <label><input type="checkbox" id="numeros" > Números</label>
         <label><input type="checkbox" id="simbolos" checked> Símbolos</label>
       </div>
       </div>
-      <div class="card-footer">
+      <div class="card-footer mb-4">
         <input type="text"
         class="form-control"
         id="inputTamanho"
